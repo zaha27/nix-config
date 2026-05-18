@@ -6,9 +6,9 @@
 
   homebrew = {
     enable = true;
-    onActivation.cleanup = "uninstall";
     onActivation.autoUpdate = true;
-    brews = [ "starship" ];
+    taps = [ "koekeishiya/formulae" ];
+    brews = [ "starship" "koekeishiya/formulae/yabai" "koekeishiya/formulae/skhd" ];
     casks = [
       "ghostty"
       "google-chrome"
