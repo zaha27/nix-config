@@ -34,6 +34,12 @@
       c    = "clear";
       q    = "exit";
       path = "echo $PATH | tr ':' '\n'";
+
+      # aplicatii
+      chrome  = "open -a 'Google Chrome'";
+      cc      = "open -a 'Claude'";
+      discord = "open -a 'Discord'";
+      docker  = "open -a 'Docker Desktop'";
     };
   };
 

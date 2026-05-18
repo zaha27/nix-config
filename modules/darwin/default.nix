@@ -21,13 +21,27 @@
 
   system.defaults = {
     finder = {
-      AppleShowAllExtensions = true;   # arata extensiile fisierelor
-      AppleShowAllFiles = true;        # arata fisierele ascunse
-      ShowPathbar = true;              # bara cu path-ul in josul ferestrei
-      ShowStatusBar = true;            # bara de status cu nr fisiere / spatiu
-      FXPreferredViewStyle = "Nlsv";   # list view implicit
-      FXDefaultSearchScope = "SCcf";  # cauta in folderul curent, nu tot mac-ul
-      _FXShowPosixPathInTitle = true;  # path complet in titlul ferestrei
+      AppleShowAllExtensions = true;
+      AppleShowAllFiles = true;
+      ShowPathbar = true;
+      ShowStatusBar = true;
+      FXPreferredViewStyle = "Nlsv";
+      FXDefaultSearchScope = "SCcf";
+      _FXShowPosixPathInTitle = true;
     };
+
+    NSGlobalDomain = {
+      NSAutomaticCapitalizationEnabled = false;
+      NSAutomaticSpellingCorrectionEnabled = false;
+      NSAutomaticDashSubstitutionEnabled = false;
+      NSAutomaticQuoteSubstitutionEnabled = false;
+      NSAutomaticPeriodSubstitutionEnabled = false;
+      NSRecentDocumentsLimit = 0;
+      KeyRepeat = 2;
+      InitialKeyRepeat = 15;
+    };
+
+    CrashReporter.DialogType = "none";
+    dock.show-recents = false;
   };
 }
