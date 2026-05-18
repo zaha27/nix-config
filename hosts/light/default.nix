@@ -1,4 +1,12 @@
-# Host configuration for light — MacBook M4 (macOS, nix-darwin).
-# Machine-specific system settings go here: hostname, user accounts,
-# system packages unique to this machine, nix-darwin options, etc.
-{ ... }: {}
+{ pkgs, ... }: {
+  system.primaryUser = "zaha";
+  networking.hostName = "light";
+  system.stateVersion = 5;
+
+  users.users.zaha = {
+    home = "/Users/zaha";
+    shell = pkgs.zsh;
+  };
+
+  programs.zsh.enable = true;
+}

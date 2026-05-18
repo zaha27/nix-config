@@ -1,3 +1,18 @@
-# home-manager configuration shared across all machines and users.
-# Add programs, dotfiles, and shell settings that belong on every host.
-{ ... }: {}
+{ ... }: {
+  programs.zsh = {
+    enable = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    initContent = ''
+      eval "$(starship init zsh)"
+    '';
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "zaha27";
+    userEmail = "andrei.zaharia2005@gmail.com";
+  };
+
+  home.stateVersion = "24.11";
+}
