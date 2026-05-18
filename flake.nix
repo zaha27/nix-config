@@ -19,18 +19,18 @@
 
   outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, ... }: {
 
-    # Apply with: darwin-rebuild switch --flake .#light
-    darwinConfigurations."light" = nix-darwin.lib.darwinSystem {
+    # Apply with: darwin-rebuild switch --flake .#mac
+    darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
-        ./hosts/light/default.nix
+        ./hosts/mac/default.nix
         ./modules/darwin/default.nix
         ./modules/common/default.nix
         home-manager.darwinModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.zaha = import ./home/light/default.nix;
+          home-manager.users.zaha = import ./home/mac/default.nix;
         }
         nix-homebrew.darwinModules.nix-homebrew
         {

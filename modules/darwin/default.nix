@@ -7,8 +7,7 @@
   homebrew = {
     enable = true;
     onActivation.autoUpdate = true;
-    taps = [ "koekeishiya/formulae" ];
-    brews = [ "starship" "koekeishiya/formulae/yabai" "koekeishiya/formulae/skhd" ];
+    brews = [ "starship" ];
     casks = [
       "ghostty"
       "google-chrome"
