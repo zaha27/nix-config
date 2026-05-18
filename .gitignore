@@ -1,9 +1,46 @@
-# Ignore build outputs from performing a nix-build or `nix build` command
+# =============================================================================
+# SECRETS AND KEYS — never commit these in plain text
+# =============================================================================
+secrets/*.age
+secrets/*.pem
+secrets/*.key
+secrets/*.env
+.env
+.env.*
+*.secret
+
+# Catch-all patterns for sensitive filenames
+*password*
+*passwd*
+*token*
+*secret*
+*credential*
+
+# SSH keys
+**/.ssh/id_*
+**/.ssh/*_rsa
+**/.ssh/*_ed25519
+**/.ssh/known_hosts
+
+# =============================================================================
+# NIX BUILD ARTIFACTS
+# =============================================================================
 result
 result-*
-
-# Ignore automatically generated direnv output
-.direnv
-
-# Ignore NixOS interactive test driver history
+.direnv/
 **/.nixos-test-history
+
+# =============================================================================
+# macOS
+# =============================================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# =============================================================================
+# EDITOR ARTIFACTS
+# =============================================================================
+.idea/
+*.swp
+*.swo
+.vscode/

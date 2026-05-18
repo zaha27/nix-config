@@ -1,0 +1,19 @@
+# sops-nix secrets encryption configuration.
+#
+# Fill in your age public keys below — one per machine.
+# Generate an age key with: age-keygen
+# Or derive one from an SSH key with: ssh-to-age
+#
+# For full setup instructions see:
+# https://github.com/Mic92/sops-nix
+#
+# keys:
+#   - &light age1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#   - &tiny    age1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#
+# creation_rules:
+#   - path_regex: secrets/.*
+#     key_groups:
+#       - age:
+#           - *light
+#           - *tiny
