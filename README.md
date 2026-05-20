@@ -1,4 +1,4 @@
-# nixos-config
+# nix-config
 
 A unified Nix configuration for two machines managed as a single flake:
 **light** (MacBook M4, macOS via nix-darwin) and **tiny** (home PC, NixOS).
