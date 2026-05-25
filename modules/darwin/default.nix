@@ -1,8 +1,18 @@
-{ ... }: {
+{ pkgs, ... }: {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.gc.automatic = true;
   nix.gc.interval = { Weekday = 0; Hour = 0; Minute = 0; };
   nix.gc.options = "--delete-older-than 30d";
+
+  environment.systemPackages = with pkgs; [
+    htop
+    ncdu
+    eza
+    uv
+    nodejs
+    python3
+    clang
+  ];
 
   homebrew = {
     enable = true;

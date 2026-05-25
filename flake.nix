@@ -25,7 +25,6 @@
       modules = [
         ./hosts/mac/default.nix
         ./modules/darwin/default.nix
-        ./modules/common/default.nix
         home-manager.darwinModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
@@ -50,7 +49,6 @@
         ./hosts/tiny/default.nix
         ./hosts/tiny/hardware.nix
         ./modules/nixos/default.nix
-        ./modules/common/default.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
