@@ -102,6 +102,8 @@
     kdePackages.sddm-kcm
     nerd-fonts.jetbrains-mono
     inter
+    mangohud      
+    protonup-qt        
   ];
 
   fonts.packages = with pkgs; [
@@ -126,6 +128,28 @@
     NVD_BACKEND             = "direct";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
   };
+
+    # Bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+  services.blueman.enable = true;
+
+  # Xbox controller (Bluetooth)
+  hardware.xpadneo.enable = true;
+
+  # Gaming
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    gamescopeSession.enable = true;
+    extraCompatPackages = with pkgs; [ proton-ge-bin ];
+  };
+
+  programs.gamemode.enable = true;
+
+  hardware.graphics.enable32Bit = true;
 
   system.stateVersion = "25.11";
 }
