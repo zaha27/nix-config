@@ -103,7 +103,10 @@
     nerd-fonts.jetbrains-mono
     inter
     mangohud      
-    protonup-qt        
+    protonup-qt
+    jetbrains-toolbox        
+    nodejs_22
+    claude-code
   ];
 
   fonts.packages = with pkgs; [

@@ -5,6 +5,7 @@
   home.homeDirectory = "/home/zaha";
   home.stateVersion = "25.11";
 
+  gtk.gtk2.configLocation = "${config.home.homeDirectory}/.config/gtk-2.0/gtkrc";
   # GTK dark theme (for Firefox, VSCode, Discord etc.)
   gtk = {
     enable = true;
